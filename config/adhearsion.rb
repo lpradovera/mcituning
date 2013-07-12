@@ -18,7 +18,7 @@ Adhearsion.config do |config|
   #        end
 
   config.development do |dev|
-    dev.platform.logging.level = :debug
+    dev.platform.logging.level = :error
   end
 
   ##
@@ -41,6 +41,7 @@ Adhearsion.config do |config|
   config.adhearsion_activerecord.adapter  = "mysql" # i.e. mysql, sqlite3
   config.adhearsion_activerecord.host     = "localhost"    # i.e. localhost
   config.adhearsion_activerecord.socket   = "/tmp/mysql.sock"
+  config.adhearsion_activerecord.pool   = 10
   config.adhearsion_activerecord.model_paths = ["/Users/luca/projects/mcituning/lib/models/member.rb",
                                                 "/Users/luca/projects/mcituning/lib/models/transaction.rb"]
 
